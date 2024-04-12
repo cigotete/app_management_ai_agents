@@ -5,7 +5,7 @@ load_dotenv()
 
 from tasks import tasks
 task_cli_create_dir = tasks.task_cli_create_dir
-task_clone_git_project = tasks.task_clone_git_project
+task_clone_install_project = tasks.task_clone_install_project
 task_install_project = tasks.task_install_project
 
 from agents import agents
