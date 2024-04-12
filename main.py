@@ -20,6 +20,7 @@ cli_crew = Crew(
     tasks=[
       #task_cli_create_dir,
       task_install_project
+      #task_clone_install_project
       ],
     process=Process.sequential,
     manager_llm=llm
