@@ -5,11 +5,11 @@ name = "pypi"
 
 [packages]
 open-interpreter = "*"
-crewai = "*"
 gradio = "*"
 langchain = "*"
 langchain-community = "*"
 python-dotenv = "*"
+crewai = {extras = ["tools"], version = "*"}
 
 [dev-packages]
 
