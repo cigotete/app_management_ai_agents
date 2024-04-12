@@ -18,7 +18,7 @@ task_cli_create_dir = Task(
 task_clone_git_project = Task(
     description='Enter to the "workarea" directory located in the root of this project, and execute following command "git clone https://github.com/cigotete/react-template-app .".',
     agent=agent_cli_manager,
-    tools=[CLITool.execute_cli_command],
+    tools=[CLIInstallProject.clone_and_install],
     expected_output='Cloned a bolderplate of a React project.'
 )
 
