@@ -5,6 +5,7 @@ from tools import tools
 from agents import agents
 
 CLITool = tools.CLITool
+CLIInstallProject = tools.CLIInstallProject
 agent_cli_manager = agents.agent_cli_manager
 
 task_cli_create_dir = Task(
@@ -15,8 +16,15 @@ task_cli_create_dir = Task(
 )
 
 task_clone_git_project = Task(
-    description='inside "workarea" execute following command "git clone https://github.com/cigotete/react-template-app .".',
+    description='Enter to the "workarea" directory located in the root of this project, and execute following command "git clone https://github.com/cigotete/react-template-app .".',
     agent=agent_cli_manager,
     tools=[CLITool.execute_cli_command],
-    expected_output='A bolderplate of a React project using Vite.'
+    expected_output='Cloned a bolderplate of a React project.'
+)
+
+task_install_project = Task(
+    description='This task is associated with a tool that will install a react App.',
+    agent=agent_cli_manager,
+    tools=[CLIInstallProject.install],
+    expected_output='A bolderplate of a React project was installed.',
 )
